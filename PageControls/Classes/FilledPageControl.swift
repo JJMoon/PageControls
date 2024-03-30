@@ -102,7 +102,8 @@ import UIKit
         for (idx, layer) in inactiveLayers.enumerated() {
             let maskLayer = CAShapeLayer()
             // maskLayer.fillRule = .evenOdd
-            maskLayer.fillRule = kCAFillRuleEvenOdd
+            // maskLayer.fillRule = kCAFillRuleEvenOdd
+          maskLayer.fillRule = CAShapeLayerFillRule.evenOdd
             
             let boundsPath = UIBezierPath(rect: layer.bounds)
             let circlePath: UIBezierPath
